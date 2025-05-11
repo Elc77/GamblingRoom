@@ -29,7 +29,8 @@ Gambling Room is a simple, interactive dice game built with PHP, HTML, CSS, and 
    ```bash
    http://localhost/gambling-room/index.php
 
-**⚙️ How the Game Works**
+## ⚙️ How the Game Works
+
 Players enter names, balances, and bets.
 
 Choose number of dice and rounds.
@@ -44,12 +45,12 @@ Final balances are displayed with round details.
 
 Automatic redirection after results.
 
-**📌 Notes**
+## 📌 Notes
 Input is validated to prevent invalid entries.
 
 A draw (tie) returns the players' bets without any loss.
 
 You can customize styles and animations via css/style.css.
 
-**🧑‍💻 Author**
+## 🧑‍💻 Author
 Made with ❤️ by Elija Čermelj.
