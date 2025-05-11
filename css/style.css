@@ -1,0 +1,175 @@
+/* Global Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Background */
+body {
+    background: linear-gradient(135deg, #f9d423, #ff4e50, #a044ff, #44bd32);
+    background-size: 400% 400%;
+    animation: backgroundShift 12s ease infinite;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Animate Background */
+@keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main Container */
+.all {
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.092);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+    width: 95%;
+    max-width: 900px;
+    color: #fff;
+    margin: 30px 0;
+}
+
+/* Title */
+form h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f1c40f;
+    margin-bottom: 2rem;
+}
+
+/* Container Section */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Player Input Block */
+.player-block {
+    padding: 1.2rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+.player-block:hover {
+    transform: scale(1.02);
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+input::placeholder {
+    color: #ccc;
+}
+input:focus, select:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 8px #f39c12;
+}
+select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: #2e5d8b;
+    color: #f1f1f1;
+    transition: background 0.3s ease;
+    appearance: none;
+}
+
+select:focus {
+    background: #2e5d8b;
+    box-shadow: 0 0 8px #f39c12;
+    outline: none;
+}
+
+select option {
+    background: #2e5d8b;
+    color: #ffffff;
+}
+
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 0.5rem;
+    color: #ecf0f1;
+}
+
+/* Buttons */
+.startBtn,
+.btn-controls button {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #e67e22, #f39c12);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+.startBtn:hover,
+.btn-controls button:hover {
+    background: linear-gradient(45deg, #f1c40f, #e67e22);
+    transform: scale(1.03);
+}
+
+/* Add/Remove Controls */
+.btn-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.btn-controls button {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .all {
+        padding: 2rem;
+    }
+
+    form h1 {
+        font-size: 2rem;
+    }
+
+    input, select, .startBtn {
+        font-size: 1rem;
+    }
+
+    .btn-controls {
+        flex-direction: column;
+    }
+}
