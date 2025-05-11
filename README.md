@@ -9,9 +9,6 @@ Gambling Room is a simple, interactive dice game built with PHP, HTML, CSS, and 
 - Dice roll simulation with random values
 - Winner detection per round
 - Bet and balance system
-- Auto-redirect to game start after results
-- Fully responsive design
-- Eye-catching animated background
 
 ## 🚀 Getting Started
 
