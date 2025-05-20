@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f9d423, #ff4e50, #4466ff, #44bd32);
+  background-size: 400% 400%;
+  animation: backgroundShift 12s ease infinite;
+}
+
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.center-box {
+  background: rgba(0, 0, 0, 0.092);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.788);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.selection-row {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  align-items: center;
+}
+
+.selection-item {
+  flex: 1 1 50px;
+}
+
+.fieldset-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+fieldset {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 250px;
+}
+
+legend {
+  font-weight: bold;
+  color: #f1c40f;
+  font-size: 1.2rem;
+}
+
+.main-title {
+  font-size: 3rem;
+  color: #f1c40f;
+}
+
+.round-heading {
+  font-size: 2.2rem;
+  color: #f1c40f;
+  margin-bottom: 30px;
+}
+
+.player-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffeaa7;
+}
+
+input[type="text"],
+select {
+  padding: 6px;
+  margin: 5px 0;
+  background: transparent;
+  border: solid 1px white;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+select:focus {
+  background: #2e5d8b;
+  box-shadow: 0 0 8px #f39c12;
+  outline: none;
+}
+
+select option {
+  background: #2e5d8b;
+  color: #ffffff;
+}
+
+button,
+input[type="submit"],
+form button {
+  display: block;
+  width: 50%;
+  margin: 10px auto;
+  background: linear-gradient(45deg, #f1c40f, #e67e22);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: linear-gradient(45deg, #e67e22, #f1c40f);
+  transform: scale(1.01);
+}
+
+.dice {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+.dice-roll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dice-visuals {
+  margin-bottom: 15px;
+}
+
+.dice-sum {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #c5c5ff;
+}
+
+.user-box {
+  background: rgba(255, 255, 255, 0.08);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1.5s ease;
+}
+
+.winner-box {
+  background: linear-gradient(45deg, #f1c40f, #e67e22);
+  color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.winner-box h3 {
+  margin: 0;
+  color: #323232;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f1c40f;
+}
+
+.leaderboard-table th {
+  background-color: rgba(255, 255, 255, 0.23);
+  font-size: 1.2rem;
+  color: white;
+}
+
+.leaderboard-table td {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.my-swal-button {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.my-swal-button:hover {
+  background: linear-gradient(90deg, #7873f5, #ff6ec4);
+  transform: scale(1.05);
+}
+
+#redirect-timer {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ccccff;
+}
+
+#countdown {
+  font-weight: bold;
+  color: #f1c40f;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .selection-row,
+  .fieldset-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  fieldset,
+  .selection-item {
+    width: 90%;
+  }
+
+  .dice {
+    width: 40px;
+    height: 40px;
+  }
+}
